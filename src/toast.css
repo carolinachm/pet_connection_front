@@ -1,0 +1,12 @@
+.Toastify__toast {
+  font-size: 16px !important; /* Tamanho da fonte */
+}
+
+.Toastify__toast--success {
+  background-color: #4caf50 !important; 
+}
+
+.Toastify__toast--error {
+  background-color: #f44336 !important; 
+  color: #FFF !important;
+}
