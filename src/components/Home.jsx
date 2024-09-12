@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
 
 
 function Home() {
@@ -17,7 +19,7 @@ function Home() {
       // Redireciona para o dashboard após login bem-sucedido
       navigate('/dashboard');
     } else {
-      alert('Login inválido!');
+      toast('Login inválido!');
     }
   };
 
