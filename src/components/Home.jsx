@@ -1,20 +1,21 @@
 
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 function Home() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     // Simulação de login - você pode substituir por uma API
     if (email === 'admin@pet.com' && password === '123456') {
       // Redireciona para o dashboard após login bem-sucedido
-      history.push('/dashboard');
+      navigate('/dashboard');
     } else {
       alert('Login inválido!');
     }
