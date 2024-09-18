@@ -10,6 +10,7 @@ function UsuarioForm() {
     nome: "",
     email: "",
     senha: "",
+    telefone: "",
     endereco: "",
   });
 
@@ -54,6 +55,7 @@ function UsuarioForm() {
         nome: "",
         email: "",
         senha: "",
+        telefone: "",
         endereco: "",
       });
       setShow(false);
@@ -115,6 +117,18 @@ function UsuarioForm() {
                 placeholder="Senha"
                 name="senha"
                 value={usuario.senha}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formTelefone">
+              <Form.Label>Telefone</Form.Label>
+              <Form.Control
+                type="tel"
+                placeholder="telefone"
+                name="telefone"
+                value={usuario.telefone}
                 onChange={handleChange}
                 required
               />
