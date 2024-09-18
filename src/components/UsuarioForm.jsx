@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 function UsuarioForm() {
   // Define o estado inicial para os campos do formulário
@@ -24,7 +25,7 @@ function UsuarioForm() {
   };
 
   // Função de envio do formulário (por exemplo, para enviar para uma API)
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!usuario.nome || !usuario.email || !usuario.senha) {
@@ -40,21 +41,30 @@ function UsuarioForm() {
     }
 
     if (usuario.senha.length < 6) {
-      toast('A senha deve ter pelo menos 6 caracteres.');
+      toast("A senha deve ter pelo menos 6 caracteres.");
       return;
     }
 
-    console.log(usuario);
+    try {
+      const response = await axios.post("http://localhost:3000/api/usuario", usuario); 
+      console.log(response);
 
-    // Aqui você pode fazer a chamada para a API ou salvar no banco de dados
-    setUsuarios([...usuarios, usuario]);
-    setUsuario({
-      nome: "",
-      email: "",
-      senha: "",
-      endereco: "",
-    });
-    setShow(false);
+      setUsuarios([...usuarios, response.data]);
+      setUsuario({
+        nome: "",
+        email: "",
+        senha: "",
+        endereco: "",
+      });
+      setShow(false);
+      toast("Usuário cadastrado com sucesso!");
+    } catch (error) {
+      if (error.response) {
+        toast("Erro ao cadastrar o usuário: " + error.response.data.message);
+      } else {
+        toast("Erro ao cadastrar o usuário: " + error.message);
+      }
+    }
   };
 
   // Funções para abrir e fechar o modal
