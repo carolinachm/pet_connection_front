@@ -1,0 +1,56 @@
+/* Home.css */
+.home-container {
+    background-color: #f4f4f4; /* Fundo neutro claro */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    background-color: #ffffff; /* Fundo branco para o conteúdo */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333333; /* Cor do título */
+}
+
+p {
+    color: #555555; /* Cor do texto */
+}
+
+.login-button {
+    background-color: #007bff; /* Cor do botão */
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+.login-modal .modal-content {
+    border-radius: 8px;
+}
+
+.submit-button {
+    background-color: #28a745; /* Cor do botão de submit */
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #218838; /* Cor do botão de submit ao passar o mouse */
+}
