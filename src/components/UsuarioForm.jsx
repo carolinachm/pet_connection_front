@@ -29,25 +29,50 @@ function UsuarioForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!usuario.nome || !usuario.email || !usuario.senha) {
+    if (
+      !usuario.nome ||
+      !usuario.email ||
+      !usuario.senha ||
+      !usuario.telefone
+    ) {
       toast("Todos os campos são obrigatórios");
       return;
     }
 
     // Validação de email
+    const email = usuario.email.trim();
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(usuario.email)) {
+    if (!emailPattern.test(email)) {
       toast("O email informado não é válido.");
       return;
     }
 
-    if (usuario.senha.length < 6) {
+    const senha = usuario.senha.trim();
+
+    if (senha.length < 6) {
       toast("A senha deve ter pelo menos 6 caracteres.");
       return;
     }
 
+    const caracterEspecial = /[@#]/;
+    if (!caracterEspecial.test(senha)) {
+      toast("A senha deve conter pelo menos um caractere especial (@ ou #).");
+      return;
+    }
+
+    // Validação de telefone (somente números e tamanho mínimo)
+    const telefonePattern = /^\d{10,11}$/;
+    if (!telefonePattern.test(usuario.telefone)) {
+      toast("O telefone deve ter 10 ou 11 dígitos.");
+      return;
+    }
+
     try {
-      const response = await axios.post("http://localhost:3000/api/usuario", usuario); 
+      const response = await axios.post(
+        "http://localhost:3000/api/usuario",
+        usuario
+      );
       console.log(response);
 
       setUsuarios([...usuarios, response.data]);
