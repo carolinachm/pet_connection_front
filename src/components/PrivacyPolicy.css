@@ -1,0 +1,13 @@
+/* Estilos para a Política de Privacidade */
+.privacy-policy {
+    padding: 20px;
+    color: #2e4347; /* Cor 5 da paleta */
+}
+
+.privacy-policy h1 {
+    font-size: 2rem;
+}
+
+.privacy-policy p {
+    font-size: 1rem;
+}

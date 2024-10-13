@@ -1,0 +1,167 @@
+/* Cores da paleta */
+.color1 { background-color: #ffb884; }
+.color2 { background-color: #f5df98; }
+.color3 { background-color: #fff8d4; }
+.color4 { background-color: #c0d1c2; }
+.color5 { background-color: #2e4347; }
+
+/* Div abaixo do cabeçalho */
+.header-below {
+    background-color: #fff8d4; /* Cor 3 da paleta */
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o logo à esquerda */
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Estilização dos botões de ação no cabeçalho */
+.action-buttons {
+    display: flex; /* Usa Flexbox para alinhar os botões em linha */
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 15px; /* Espaço entre os botões */
+}
+
+.btn-custom {
+    font-size: 0.9rem; /* Tamanho da fonte */
+    padding: 8px 15px; /* Ajustado para um tamanho menor */
+    background-color: #2e4347; /* Cor padrão (Cor 5) */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+.btn-custom:hover {
+    background-color: #ffb884; /* Cor 1 para hover */
+}
+
+/* Seção principal com imagem de fundo */
+.main-section {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ajustado para centralizar o conteúdo */
+    position: relative;
+    background-color: #89a7b1; /* Cor 3 da paleta */
+    padding: 0 20px;
+}
+
+.animal-left, .animal-right {
+    height: 250px;
+}
+
+.content {
+    text-align: center;
+}
+
+.main-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2e4347; /* Cor 5 para o texto */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 15px;
+    flex-direction: column; /* Coloca os botões em coluna */
+}
+
+button {
+    font-size: 1rem; /* Diminuído para 1rem */
+    padding: 8px 20px; /* Ajustado para um tamanho menor */
+    background-color: #ffb884; /* Cor 1 */
+    border: none;
+    color: white;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+button:hover {
+    background-color: #f5df98; /* Cor 2 para hover */
+}
+
+/* Título da próxima seção */
+.section-title {
+    text-align: center;
+    margin: 50px 0;
+    color: #2e4347;
+}
+
+.animal-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #c0d1c2; /* Cor 4 para a borda dos cards */
+    background-color: #89a7b1; /* Cor 3 para o fundo dos cards */
+    margin-bottom: 30px;
+    border-radius: 15px; /* Cantos arredondados */
+    padding: 10px;
+    text-align: center; /* Centraliza o texto no cartão */
+    height: 750px; /* Define uma altura fixa para todos os cartões */
+}
+
+.animal-card img {
+    width: 100%; /* A largura da imagem ocupa 100% do cartão */
+    height: 450px; /* Ajustado para uma altura menor para dar mais espaço ao texto */
+    object-fit: cover; /* Corta a imagem mantendo a proporção */
+    border-radius: 10px; /* Cantos arredondados para a imagem */
+    margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+}
+
+.animal-info {
+    position: relative; 
+    background: rgba(255, 184, 132, 0.9); /* Cor 1 com opacidade */
+    color: #2e4347; /* Cor do texto do nome do animal */
+    padding: 10px;
+    border-radius: 10px; /* Cantos arredondados para a aba de informações */
+    text-align: center; /* Centraliza o nome do animal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    height: calc(100% - 460px); /* Ajuste para garantir que as informações caibam */
+}
+
+.animal-name {
+    font-size: 1.2rem; /* Tamanho da fonte do nome */
+    font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+    width: 100%; /* O rodapé usa toda a largura da página */
+    background-color: #fff8d4 !important; /* Cor 3 da paleta, igual à primeira div */
+    padding: 20px 0;
+    position: relative; /* Garante que o rodapé fique na parte inferior */
+    z-index: 1; /* Adicionado para garantir que fique acima de outros elementos */
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 0 15px; /* Espaço lateral no rodapé */
+}
+
+.footer-content p {
+    margin: 0; /* Remove margem do parágrafo */
+}
+
+/* Estilizando os links do rodapé */
+.footer-content a {
+    color: #2e4347; /* Cor 5 da paleta para os links */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+}
