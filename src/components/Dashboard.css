@@ -5,6 +5,10 @@
 .color4 { background-color: #c0d1c2; }
 .color5 { background-color: #2e4347; }
 
+body {
+    background-color: #fff8d4;
+}
+
 /* Div abaixo do cabeçalho */
 .header-below {
     background-color: #fff8d4; /* Cor 3 da paleta */
@@ -145,6 +149,11 @@ button:hover {
     position: relative; /* Garante que o rodapé fique na parte inferior */
     z-index: 1; /* Adicionado para garantir que fique acima de outros elementos */
 }
+
+footer img {
+    position: absolute;
+    right: 50px;
+  }
 
 .footer-content {
     display: flex; 
