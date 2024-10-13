@@ -12,8 +12,8 @@ function Home() {
   const navigate = useNavigate();
 
   const visualizarSenha = () => {
-    setShowPassword(!showPassword)
-  }
+    setShowPassword(!showPassword);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -29,38 +29,42 @@ function Home() {
   return (
     <div className="home-container">
       <div className="content-wrapper">
-        <h1>Bem-vindo ao Pet Connection</h1>
-        <p>O Pet Connection ajuda você a conectar-se com o seu pet ideal.</p>
+        <div>
+          <h1>Bem-vindo ao Pet Connection</h1>
+          <p>O Pet Connection ajuda você a conectar-se com o seu pet ideal.</p>
+        </div>
 
-        {/* Formulário de Login diretamente na página */}
-        <Form onSubmit={handleLogin}>
-          <Form.Group controlId="formEmail">
-            <Form.Control
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="custom-input" // Adicionando uma classe personalizada
-            />
-          </Form.Group>
-          <Form.Group controlId="formPassword" className="password-group">
-        <Form.Control
-          type={showPassword ? "text" : "password"} // Alterna entre 'text' e 'password'
-          placeholder="Senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <span className="password-toggle-icon" onClick={visualizarSenha}>
-          {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />} {/* Alterna ícone */}
-        </span>
-      </Form.Group>
+        <div className="form-wrapper">
+          <Form onSubmit={handleLogin}>
+            <Form.Group controlId="formEmail">
+              <Form.Control
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="custom-input"
+              />
+            </Form.Group>
+            <Form.Group controlId="formPassword" className="password-group">
+              <Form.Control
+                type={showPassword ? "text" : "password"}
+                placeholder="Senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="custom-input" // Classe personalizada
+              />
+              <span className="password-toggle-icon" onClick={visualizarSenha}>
+                {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
+              </span>
+            </Form.Group>
 
-          <Button type="submit" variant="primary" className="submit-button">
-            Entrar
-          </Button>
-        </Form>
+            <Button type="submit" variant="primary" className="submit-button">
+              Entrar
+            </Button>
+          </Form>
+        </div>
       </div>
     </div>
   );
