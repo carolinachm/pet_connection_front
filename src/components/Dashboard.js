@@ -54,7 +54,7 @@ function Dashboard() {
                 <Row>
                     <Col md={4}>
                         <div className="animal-card">
-                            <img src="/imagens/gato.jpg" alt="Animal 1" />
+                            <img src="/imagens/gato.webp" alt="Animal 1" />
                             <div className="animal-info">
                                 <div className="animal-name">Rex</div>
                                 <div className="animal-details">
@@ -67,7 +67,7 @@ function Dashboard() {
                     </Col>
                     <Col md={4}>
                         <div className="animal-card">
-                            <img src="/imagens/dog.jpg" alt="Animal 2" />
+                            <img src="/imagens/dog.webp" alt="Animal 2" />
                             <div className="animal-info">
                                 <div className="animal-name">Luna</div>
                                 <div className="animal-details">
@@ -80,7 +80,7 @@ function Dashboard() {
                     </Col>
                     <Col md={4}>
                         <div className="animal-card">
-                            <img src="/imagens/catdog.jpg" alt="Animal 3" />
+                            <img src="/imagens/catdog.webp" alt="Animal 3" />
                             <div className="animal-info">
                                 <div className="animal-name">Max</div>
                                 <div className="animal-details">

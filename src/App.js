@@ -16,10 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/usuarioForm" element={<Usuario /> } />
-        <Route path="/TermsOfUse" component={<TermsOfUse/>} />
-        <Route path="/PrivacyPolicy" component={<PrivacyPolicy/>} />
-        <Route path="/About" component={<About/>} />
+        <Route path="/Usuario" element={<Usuario /> } />
+        <Route path="/TermsOfUse" element={<TermsOfUse/>} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+        <Route path="/About" element={<About/>} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>

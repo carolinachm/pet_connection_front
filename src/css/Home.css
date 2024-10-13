@@ -1,56 +1,119 @@
 /* Home.css */
 .home-container {
-    background-color: #f4f4f4; /* Fundo neutro claro */
+    background-color: #fff8d4; /* Fundo neutro claro */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif; /* Fonte simples e limpa */
 }
 
 .content-wrapper {
-    background-color: #ffffff; /* Fundo branco para o conteúdo */
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff6e0; /* Fundo branco para o conteúdo */
+    padding: 5rem;
+    border-radius: 12px; /* Bordas mais arredondadas para um visual moderno */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombras mais suaves */
     text-align: center;
+    max-width: 400px; /* Limita a largura do conteúdo */
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.content-wrapper:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada ao passar o mouse */
 }
 
 h1 {
     color: #333333; /* Cor do título */
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 p {
     color: #555555; /* Cor do texto */
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
-.login-button {
-    background-color: #007bff; /* Cor do botão */
+.login-button, .submit-button {
+    margin-top: 10px;
+    display: inline-block;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* Gradiente sutil */
     border: none;
     color: #ffffff;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px; /* Botões arredondados */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais definida */
 }
 
-.login-button:hover {
-    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+.login-button:hover, .submit-button:hover {
+    background: linear-gradient(135deg, #0062cc 0%, #004085 100%); /* Alteração no gradiente ao passar o mouse */
+    transform: translateY(-3px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
 }
 
-.login-modal .modal-content {
-    border-radius: 8px;
+.login-button:active, .submit-button:active {
+    transform: translateY(1px); /* Leve movimento para dentro ao clicar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve ao clicar */
 }
 
 .submit-button {
-    background-color: #28a745; /* Cor do botão de submit */
-    border: none;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%); /* Gradiente para o botão submit */
 }
 
 .submit-button:hover {
-    background-color: #218838; /* Cor do botão de submit ao passar o mouse */
+    background: linear-gradient(135deg, #218838 0%, #1e7e34 100%); /* Alteração no gradiente ao passar o mouse */
+}
+
+.custom-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem; /* Espaçamento acima */
+    margin-bottom: 1.5rem; /* Espaçamento abaixo */
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.password-group {
+    position: relative;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .password-toggle-icon:hover {
+    color: #0056b3; /* Muda a cor ao passar o mouse */
+  }
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
 }
