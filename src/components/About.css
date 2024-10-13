@@ -1,0 +1,13 @@
+/* Estilos para a página Sobre */
+.about {
+    padding: 20px;
+    color: #2e4347; /* Cor 5 da paleta */
+}
+
+.about h1 {
+    font-size: 2rem;
+}
+
+.about p {
+    font-size: 1rem;
+}

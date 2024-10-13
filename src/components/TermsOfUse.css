@@ -1,0 +1,13 @@
+/* Estilos para os Termos de Uso */
+.terms-of-use {
+    padding: 20px;
+    color: #2e4347; /* Cor 5 da paleta */
+}
+
+.terms-of-use h1 {
+    font-size: 2rem;
+}
+
+.terms-of-use p {
+    font-size: 1rem;
+}
