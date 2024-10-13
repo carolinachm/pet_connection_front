@@ -102,8 +102,8 @@ function Dashboard() {
                                 <Nav className="flex-column">
                                     <Nav.Link as={Link} to="/contato">Contato</Nav.Link>
                                     <Nav.Link as={Link} to="/About">Sobre</Nav.Link>
-                                    <Nav.Link as={Link} to="/politica">Política de Privacidade</Nav.Link>
-                                    <Nav.Link as={Link} to="/termos">Termos de Uso</Nav.Link>
+                                    <Nav.Link as={Link} to="/PrivacyPolicy">Política de Privacidade</Nav.Link>
+                                    <Nav.Link as={Link} to="/termsOfUse">Termos de Uso</Nav.Link>
                                 </Nav>
                             </Col>
                             <Col md={4} className="text-center">
