@@ -4,7 +4,7 @@ import {
   getUsuarios,
   createUsuario,
   deleteUsuario
-} from '../service/usuarioService'; // Importa as funções do serviço
+} from '../../service/usuarioService'; // Importa as funções do serviço
 
 function Usuario() {
   const [show, setShow] = useState(false);

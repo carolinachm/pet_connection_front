@@ -1,0 +1,34 @@
+.form-container {
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px; /* Adiciona espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+  }
+  
+  .form-container h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+  }
+  
+  .form-container input {
+    width: 100%; /* Largura total dos inputs */
+    padding: 10px; /* Espaçamento interno nos inputs */
+    margin: 10px 0; /* Margem vertical entre os inputs */
+    border: 1px solid #ccc; /* Borda dos inputs */
+    border-radius: 4px; /* Bordas arredondadas dos inputs */
+  }
+  
+  .btn-custom {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno do botão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+  }
+  
+  .btn-custom:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+  }
