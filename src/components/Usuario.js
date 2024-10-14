@@ -5,6 +5,7 @@ import {
   createUsuario,
   deleteUsuario
 } from '../service/usuarioService'; // Importa as funções do serviço
+import './Usuario.css'; // Certifique-se de que seu CSS está sendo importado
 
 function Usuario() {
   const [show, setShow] = useState(false);
@@ -138,6 +139,11 @@ function Usuario() {
                 </tbody>
               </table>
           )}
+        </div>
+
+        {/* Logo fixo na parte inferior direita */}
+        <div className="fixed-logo">
+          <img src="/imagens/logo2.png" alt="Logo" />
         </div>
       </div>
   );

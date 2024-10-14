@@ -1,0 +1,86 @@
+/* Cores da paleta */
+.color1 { background-color: #ffb884; }
+.color2 { background-color: #f5df98; }
+.color3 { background-color: #fff8d4; }
+.color4 { background-color: #c0d1c2; }
+.color5 { background-color: #2e4347; }
+
+/* Corpo da página */
+body {
+    background-color: #fff8d4; /* Cor 3 */
+    position: relative; /* Para posicionamento do logo */
+    min-height: 100vh; /* Para garantir que a página tenha altura mínima */
+}
+
+/* Cabeçalho com o logo à direita */
+.header {
+    display: flex;
+    justify-content: space-between; /* Logo à direita */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2e4347; /* Cor 5 */
+}
+
+/* Centralizando botões e título */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todo o conteúdo */
+}
+
+.action-buttons {
+    margin-bottom: 20px; /* Espaço abaixo dos botões */
+}
+
+/* Alterando as cores dos botões */
+.button {
+    font-size: 0.9rem;
+    padding: 10px 20px; /* Aumente o padding se necessário */
+    background-color: #ffb884; /* Cor 1 */
+    color: #2e4347; /* Cor 5 */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #c0d1c2; /* Cor 4 */
+}
+
+/* Tabela de Usuários */
+.table {
+    width: 80%; /* Ajuste a largura da tabela */
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center; /* Centraliza o texto da tabela */
+}
+
+/* Logo fixo na parte inferior direita */
+.fixed-logo {
+    position: fixed;
+    bottom: 20px; /* Ajuste a distância do fundo da página */
+    right: 20px; /* Ajuste a distância da direita */
+    z-index: 1000; /* Para garantir que o logo fique acima de outros elementos */
+}
+
+/* Modal Formulário */
+.modal-header, .modal-footer {
+    background-color: #ffb884; /* Cor 1 */
+    color: #2e4347;
+}
+
+.modal-body {
+    background-color: #fff8d4; /* Cor 3 */
+}
+
+button[type="submit"] {
+    background-color: #2e4347; /* Cor 5 */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffb884; /* Cor 1 */
+}

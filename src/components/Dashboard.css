@@ -106,34 +106,36 @@ button:hover {
 .animal-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid #c0d1c2; /* Cor 4 para a borda dos cards */
+    border: 1px solid #89a7b1; /* Cor 4 para a borda dos cards */
     background-color: #89a7b1; /* Cor 3 para o fundo dos cards */
     margin-bottom: 30px;
     border-radius: 15px; /* Cantos arredondados */
     padding: 10px;
     text-align: center; /* Centraliza o texto no cartão */
-    height: 750px; /* Define uma altura fixa para todos os cartões */
+    height: 700px; /* Define uma altura fixa para os cartões */
 }
 
 .animal-card img {
     width: 100%; /* A largura da imagem ocupa 100% do cartão */
-    height: 450px; /* Ajustado para uma altura menor para dar mais espaço ao texto */
-    object-fit: cover; /* Corta a imagem mantendo a proporção */
+    height: 500px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem sem cortar */
+    display: block; /* Faz a imagem ser um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
     border-radius: 10px; /* Cantos arredondados para a imagem */
     margin-bottom: 5px; /* Espaço entre a imagem e o texto */
 }
 
 .animal-info {
     position: relative; 
-    background: rgba(255, 184, 132, 0.9); /* Cor 1 com opacidade */
+    background: #ffb884; /* Cor 1 com opacidade */
     color: #2e4347; /* Cor do texto do nome do animal */
     padding: 10px;
     border-radius: 10px; /* Cantos arredondados para a aba de informações */
     text-align: center; /* Centraliza o nome do animal */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
-    height: calc(100% - 460px); /* Ajuste para garantir que as informações caibam */
+    justify-content: flex-start; /* Ajustado para manter o conteúdo no topo */
+    height: calc(100% - 510px); /* Ajustado para garantir que as informações caibam */
 }
 
 .animal-name {
@@ -148,18 +150,22 @@ button:hover {
     padding: 20px 0;
     position: relative; /* Garante que o rodapé fique na parte inferior */
     z-index: 1; /* Adicionado para garantir que fique acima de outros elementos */
+    margin-top: 40px; /* Adiciona espaço entre o rodapé e os cartões */
+    display: flex; /* Adiciona Flexbox para o alinhamento */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    padding-left: 40px; /* Espaçamento à esquerda */
 }
 
 footer img {
     position: absolute;
     right: 50px;
-  }
+}
 
 .footer-content {
     display: flex; 
-    justify-content: space-between; /* Distribui o espaço entre os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
     align-items: center; /* Alinha verticalmente ao centro */
-    padding: 0 15px; /* Espaço lateral no rodapé */
+    margin: 0; /* Remove margens para evitar deslocamento */
 }
 
 .footer-content p {
@@ -169,6 +175,7 @@ footer img {
 /* Estilizando os links do rodapé */
 .footer-content a {
     color: #2e4347; /* Cor 5 da paleta para os links */
+    margin-left: -50px; /* Espaço entre os links */
 }
 
 .footer-content a:hover {
