@@ -4,8 +4,13 @@ import {
   getUsuarios,
   createUsuario,
   deleteUsuario
-} from '../service/usuarioService'; // Importa as funções do serviço
-import './Usuario.css'; // Certifique-se de que seu CSS está sendo importado
+
+} 
+from '../../service/usuarioService'; // Certifique-se de que o caminho está correto
+import './Usuario.css'; // O caminho relativo ao CSS está correto
+
+
+
 
 function Usuario() {
   const [show, setShow] = useState(false);
