@@ -48,10 +48,6 @@ const AnimalForm = () => {
       formData.append(key, animal[key]);
     }
 
-    // Debug: Verifique os dados que estão sendo enviados
-  for (let pair of formData.entries()) {
-    console.log(pair[0] + ': ' + pair[1]);
-  }
 
     try {
       const response = await axios.post(
