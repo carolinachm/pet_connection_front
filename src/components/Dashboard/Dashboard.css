@@ -7,161 +7,178 @@
 
 /* Div abaixo do cabeçalho */
 .header-below {
-    background-color: #fff8d4; /* Cor 3 da paleta */
-    padding: 20px 0;
+    background-color: #fff8d4  !important; /* Cor 3 da paleta */
+    padding: 20px 0  !important;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Alinha o logo à esquerda */
+    display: flex  !important;
+    align-items: center  !important;
+    justify-content: flex-start  !important; /* Alinha o logo à esquerda */
 }
 
 .menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    display: flex  !important;
+    align-items: center  !important;
+    justify-content: flex-end  !important;
 }
 
 /* Estilização dos botões de ação no cabeçalho */
 .action-buttons {
-    display: flex; /* Usa Flexbox para alinhar os botões em linha */
-    justify-content: flex-end; /* Alinha os botões à direita */
-    gap: 15px; /* Espaço entre os botões */
+    display: flex  !important; /* Usa Flexbox para alinhar os botões em linha */
+    justify-content: flex-end  !important; /* Alinha os botões à direita */
+    gap: 15px  !important; /* Espaço entre os botões */
 }
 
 .btn-custom {
-    font-size: 0.9rem; /* Tamanho da fonte */
-    padding: 8px 15px; /* Ajustado para um tamanho menor */
-    background-color: #2e4347; /* Cor padrão (Cor 5) */
-    color: white; /* Cor do texto */
-    border: none; /* Remove borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Transição suave para hover */
+    font-size: 0.9rem  !important; /* Tamanho da fonte */
+    padding: 8px 15px  !important; /* Ajustado para um tamanho menor */
+    background-color: #2e4347  !important; /* Cor padrão (Cor 5) */
+    color: white  !important; /* Cor do texto */
+    border: none  !important; /* Remove borda */
+    border-radius: 5px  !important; /* Bordas arredondadas */
+    transition: background-color 0.3s  !important; /* Transição suave para hover */
 }
 
 .btn-custom:hover {
-    background-color: #ffb884; /* Cor 1 para hover */
+    background-color: #ffb884  !important; /* Cor 1 para hover */
 }
 
 /* Seção principal com imagem de fundo */
 .main-section {
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Ajustado para centralizar o conteúdo */
-    position: relative;
-    background-color: #89a7b1; /* Cor 3 da paleta */
-    padding: 0 20px;
+    background-size: cover  !important;
+    background-position: center  !important;
+    height: 80vh  !important;
+    display: flex  !important;
+    align-items: center  !important;
+    justify-content: center  !important; /* Ajustado para centralizar o conteúdo */
+    position: relative  !important;
+    background-color: #89a7b1  !important; /* Cor 3 da paleta */
+    padding: 0 20px  !important;
 }
 
 .animal-left, .animal-right {
-    height: 250px;
+    height: 250px  !important;
 }
 
 .content {
-    text-align: center;
+    text-align: center  !important;
 }
 
 .main-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #2e4347; /* Cor 5 para o texto */
+    font-size: 2.5rem  !important;
+    margin-bottom: 20px  !important;
+    color: #2e4347  !important; /* Cor 5 para o texto */
 }
 
 .buttons {
-    display: flex;
-    justify-content: center; /* Centraliza os botões */
-    gap: 15px;
-    flex-direction: column; /* Coloca os botões em coluna */
+    display: flex  !important;
+    justify-content: center  !important; /* Centraliza os botões */
+    gap: 15px  !important;
+    flex-direction: column  !important; /* Coloca os botões em coluna */
 }
 
 button {
-    font-size: 1rem; /* Diminuído para 1rem */
-    padding: 8px 20px; /* Ajustado para um tamanho menor */
-    background-color: #ffb884; /* Cor 1 */
-    border: none;
-    color: white;
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Transição suave para hover */
+    font-size: 1rem  !important; /* Diminuído para 1rem */
+    padding: 8px 20px  !important; /* Ajustado para um tamanho menor */
+    background-color: #ffb884  !important; /* Cor 1 */
+    border: none  !important;
+    color: white  !important;
+    border-radius: 5px  !important; /* Bordas arredondadas */
+    transition: background-color 0.3s  !important; /* Transição suave para hover */
 }
 
 button:hover {
-    background-color: #f5df98; /* Cor 2 para hover */
+    background-color: #f5df98  !important; /* Cor 2 para hover */
 }
 
 /* Título da próxima seção */
 .section-title {
-    text-align: center;
-    margin: 50px 0;
-    color: #2e4347;
+    text-align: center  !important;
+    margin: 50px 0  !important;
+    color: #2e4347  !important;
 }
 
 .animal-card {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #c0d1c2; /* Cor 4 para a borda dos cards */
-    background-color: #89a7b1; /* Cor 3 para o fundo dos cards */
-    margin-bottom: 30px;
-    border-radius: 15px; /* Cantos arredondados */
-    padding: 10px;
-    text-align: center; /* Centraliza o texto no cartão */
-    height: 750px; /* Define uma altura fixa para todos os cartões */
+    position: relative  !important;
+    overflow: hidden  !important;
+    border: 1px solid #c0d1c2  !important; /* Cor 4 para a borda dos cards */
+    background-color: #89a7b1  !important; /* Cor 3 para o fundo dos cards */
+    margin-bottom: 30px  !important;
+    border-radius: 15px  !important; /* Cantos arredondados */
+    padding: 10px  !important;
+    text-align: center  !important; /* Centraliza o texto no cartão */
+    height: 750px  !important; /* Define uma altura fixa para todos os cartões */
 }
 
 .animal-card img {
-    width: 100%; /* A largura da imagem ocupa 100% do cartão */
-    height: 450px; /* Ajustado para uma altura menor para dar mais espaço ao texto */
-    object-fit: cover; /* Corta a imagem mantendo a proporção */
-    border-radius: 10px; /* Cantos arredondados para a imagem */
-    margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+    width: 100%  !important; /* A largura da imagem ocupa 100% do cartão */
+    height: 450px  !important; /* Ajustado para uma altura menor para dar mais espaço ao texto */
+    object-fit: cover  !important; /* Corta a imagem mantendo a proporção */
+    border-radius: 10px  !important; /* Cantos arredondados para a imagem */
+    margin-bottom: 5px  !important; /* Espaço entre a imagem e o texto */
 }
 
+.animal-card {
+    opacity: 0  !important;
+    transform: translateY(50px)  !important;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out  !important;
+}
+
+.animal-card.visible {
+    opacity: 1  !important;
+    transform: translateY(0)  !important;
+}
+
+.animal-card.hidden {
+    opacity: 0  !important;
+    transform: translateY(50px)  !important;
+}
+
+
 .animal-info {
-    position: relative; 
-    background: rgba(255, 184, 132, 0.9); /* Cor 1 com opacidade */
-    color: #2e4347; /* Cor do texto do nome do animal */
-    padding: 10px;
-    border-radius: 10px; /* Cantos arredondados para a aba de informações */
-    text-align: center; /* Centraliza o nome do animal */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
-    height: calc(100% - 460px); /* Ajuste para garantir que as informações caibam */
+    position: relative  !important; 
+    background: rgba(255, 184, 132, 0.9)   !important; /* Cor 1 com opacidade */
+    color: #2e4347  !important; /* Cor do texto do nome do animal */
+    padding: 10px  !important;
+    border-radius: 10px  !important; /* Cantos arredondados para a aba de informações */
+    text-align: center  !important; /* Centraliza o nome do animal */
+    display: flex  !important;
+    flex-direction: column  !important;
+    justify-content: center  !important; /* Centraliza verticalmente o conteúdo */
+    height: calc(100% - 460px)  !important; /* Ajuste para garantir que as informações caibam */
 }
 
 .animal-name {
-    font-size: 1.2rem; /* Tamanho da fonte do nome */
-    font-weight: bold;
+    font-size: 1.2rem  !important; /* Tamanho da fonte do nome */
+    font-weight: bold  !important;
 }
 
 /* Rodapé */
 .footer {
-    width: 100%; /* O rodapé usa toda a largura da página */
+    width: 100%  !important; /* O rodapé usa toda a largura da página */
     background-color: #fff8d4 !important; /* Cor 3 da paleta, igual à primeira div */
-    padding: 20px 0;
-    position: relative; /* Garante que o rodapé fique na parte inferior */
-    z-index: 1; /* Adicionado para garantir que fique acima de outros elementos */
+    padding: 20px 0  !important;
+    position: relative  !important; /* Garante que o rodapé fique na parte inferior */
+    z-index: 1  !important; /* Adicionado para garantir que fique acima de outros elementos */
 }
 
 .footer-content {
-    display: flex; 
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    align-items: center; /* Alinha verticalmente ao centro */
-    padding: 0 15px; /* Espaço lateral no rodapé */
+    display: flex  !important; 
+    justify-content: space-between  !important; /* Distribui o espaço entre os itens */
+    align-items: center  !important; /* Alinha verticalmente ao centro */
+    padding: 0 15px  !important; /* Espaço lateral no rodapé */
 }
 
 .footer-content p {
-    margin: 0; /* Remove margem do parágrafo */
+    margin: 0  !important; /* Remove margem do parágrafo */
 }
 
 /* Estilizando os links do rodapé */
 .footer-content a {
-    color: #2e4347; /* Cor 5 da paleta para os links */
+    color: #2e4347  !important; /* Cor 5 da paleta para os links */
 }
 
 .footer-content a:hover {
-    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+    text-decoration: underline  !important; /* Adiciona um sublinhado ao passar o mouse */
 }

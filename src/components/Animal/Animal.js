@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Animal.css";
+import "./AnimalEstilo.css";
 import { toast } from "react-toastify";
 
 const AnimalForm = () => {
