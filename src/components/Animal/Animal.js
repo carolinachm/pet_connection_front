@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import axios from "axios";
 import "./AnimalEstilo.css";
 import { toast } from "react-toastify";
@@ -18,36 +18,67 @@ const AnimalForm = () => {
     foto: null,
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const isIdadeValida = (idade) => {
+    const idadeNum = Number(idade);
+    return /^\d+$/.test(idade) && idadeNum >= 0; // Valida se é inteiro não negativo
+  }
 
-    if (name === "idade") {
-      if (!/^\d*$/.test(value)) {
-        toast.error("A idade deve ser um número inteiro.");
-        return;
-      }
+  const handleChange = useCallback((e) => {
+    const { name, value } = e.target;
+    if (name === "idade" && !isIdadeValida(value)) {
+      toast.error("A idade deve ser um número inteiro");
+      return;
     }
-    setAnimal({ ...animal, [name]: value });
-  };
+    setAnimal((prevAnimal) => ({ ...prevAnimal, [name]: value }));
+  }, []);
 
   const handleFileChange = (e) => {
-    setAnimal({ ...animal, foto: e.target.files[0] });
+    const file = e.target.files[0];
+
+    if (!file.type.startsWith("image/")) {
+      toast.error("Por favor, selecione um arquivo de imagem válido.");
+      return;
+    }
+    setAnimal((prevAnimal) => ({ ...prevAnimal, foto: file }));
+  };
+
+  const resetForm = () => {
+    setAnimal({
+      nome: "",
+      especie: "",
+      raca: "",
+      idade: "",
+      sexo: "",
+      tamanho: "",
+      cor: "",
+      caracteristicas: "",
+      status: "",
+      data_entrada: "",
+      foto: null,
+    });
+  };
+
+  const validarCampos = () => {
+    if (animal.nome.trim() === "" || animal.especie.trim() === "") {
+      toast.error("Preencha todos os campos obrigatórios.");
+      return false;
+    }
+    if (animal.idade && !isIdadeValida(animal.idade)) {
+      toast.error("A idade deve ser um número inteiro.");
+      return false;
+    }
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validação de idade: Verifica se é um número inteiro.
-    if (animal.idade && !Number.isInteger(Number(animal.idade))) {
-      toast.error("A idade deve ser um número inteiro.");
-      return;
-    }
+    if (!validarCampos()) return;
 
     const formData = new FormData();
     for (let key in animal) {
       formData.append(key, animal[key]);
     }
-
 
     try {
       const response = await axios.post(
@@ -59,23 +90,16 @@ const AnimalForm = () => {
           },
         }
       );
-      console.log(response);
 
-      setAnimal({
-        nome: "",
-        especie: "",
-        raca: "",
-        idade: "",
-        sexo: "",
-        tamanho: "",
-        cor: "",
-        caracteristicas: "",
-        status: "",
-        data_entrada: "",
-        foto: null,
-      });
+      if (response.status >= 200 && response.status < 300) {
+        toast.success("Animal cadastrado com sucesso");
+        resetForm();
+      } else {
+        toast.error("Ocorreu um erro no cadastro. Tente Novamente.");
+      }
     } catch (error) {
       console.error("Erro ao enviar os dados:", error);
+      toast.error("Erro ao cadastrar o animal. Verifique os dados novamente");
     }
   };
 
@@ -112,6 +136,7 @@ const AnimalForm = () => {
           placeholder="Idade"
           value={animal.idade}
           onChange={handleChange}
+          required
         />
         <input
           type="text"
