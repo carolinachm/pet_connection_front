@@ -7,9 +7,10 @@ import TermsOfUse from "./components/TermsOfUse/TermsOfUse";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import About from "./components/About/About";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-import './toast.css';
+import "react-toastify/dist/ReactToastify.css";
+import "./toast.css";
 import AnimalForm from "./components/Animal/Animal";
+import AdocaoList from "./components/Adocao/Adocao";
 
 function App() {
   return (
@@ -17,11 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/Usuario" element={<Usuario /> } />
-        <Route path="/TermsOfUse" element={<TermsOfUse/>} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
-        <Route path="/About" element={<About/>} />
+        <Route path="/Usuario" element={<Usuario />} />
+        <Route path="/TermsOfUse" element={<TermsOfUse />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/About" element={<About />} />
         <Route path="/Animal" element={<AnimalForm />} />
+        <Route path="/Adocao" element={<AdocaoList />} />
       </Routes>
       <ToastContainer />
     </BrowserRouter>
