@@ -1,50 +1,22 @@
 .animal-list {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    padding: 20px !important; 
-  }
-  
-  .animal-card {
-    background-color: #fff8d4 !important; /* Cor de fundo dos cards */
-    border: 2px solid #c0d1c2 !important; /* Borda dos cards */
-    border-radius: 8px !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    overflow: hidden !important;
-    max-width: 300px !important;
-    width: 100% !important;
-    text-align: center !important;
-    transition: transform 0.3s ease !important;
-  }
-  
-  .animal-card:hover {
-    transform: scale(1.05) !important; /* Efeito de zoom ao passar o mouse */
-  }
-  
-  .animal-foto {
-    width: 100% !important; /* Ajuste conforme necessário */
-    height: auto !important; /* Mantém a proporção da imagem */
-    max-width: 200px !important; /* Limite máximo de largura */
-  }
-  
-  .animal-card h3 {
-    font-size: 1.5rem !important;
-    color: #2e4347 !important;
-    margin: 10px 0 5px 0 !important;
-  }
-  
-  .animal-card p {
-    font-size: 1rem !important;
-    color: #2e4347 !important;
-    margin: 0 0 10px 0 !important;
-  }
-  
-  .animal-cards-container {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    padding: 20px !important;
-  }
-  
+  padding: 20px;
+}
+
+.animal-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cartões se movam para a próxima linha se não houver espaço */
+  gap: 20px; /* Espaço entre os cartões */
+}
+
+.animal-card2 {
+  border: 1px solid #ccc; /* Borda dos cartões */
+  border-radius: 8px; /* Cantos arredondados */
+  overflow: hidden; /* Garante que o conteúdo não transborde */
+  width: 200px; /* Largura fixa para cada cartão */
+  text-align: center; /* Centraliza o texto */
+}
+
+.animal-foto {
+  width: 100%; /* A imagem ocupa 100% do cartão */
+  height: auto; /* Mantém a proporção da imagem */
+}

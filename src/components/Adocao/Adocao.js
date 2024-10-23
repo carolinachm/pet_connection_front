@@ -28,7 +28,7 @@ const AdocaoList = () => {
           console.log("URL da imagem:", imgUrl); // Verifique a URL da imagem
 
           return (
-            <div className="animal-card" key={animal.id}>
+            <div className="animal-card2" key={animal.id}>
               <img
                 src={imgUrl} // A URL da imagem deve ser acessível
                 alt={animal.nome}
