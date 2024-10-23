@@ -2,8 +2,10 @@ import React, { useCallback, useState } from "react";
 import axios from "axios";
 import "./AnimalEstilo.css";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const AnimalForm = () => {
+  const navigate = useNavigate();
   const [animal, setAnimal] = useState({
     nome: "",
     especie: "",
@@ -94,6 +96,7 @@ const AnimalForm = () => {
       if (response.status >= 200 && response.status < 300) {
         toast.success("Animal cadastrado com sucesso");
         resetForm();
+        navigate('/Adocao');
       } else {
         toast.error("Ocorreu um erro no cadastro. Tente Novamente.");
       }
