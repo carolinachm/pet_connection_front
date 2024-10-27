@@ -7,7 +7,7 @@ import {
 
 } 
 from '../../service/usuarioService'; // Certifique-se de que o caminho está correto
-import './Usuario.css'; // O caminho relativo ao CSS está correto
+import './Usuario'; // O caminho relativo ao CSS está correto
 
 
 

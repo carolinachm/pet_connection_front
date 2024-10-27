@@ -21,7 +21,7 @@ function Dashboard() {
                                 <div className="action-buttons">
                                     <Button as={Link} to="/usuario" className="btn-custom">Usuário</Button>
                                     <Button as={Link} to="/padrinho" className="btn-custom">Padrinho</Button>
-                                    <Button as={Link} to="/AcessoRestrito" className="btn-custom">Acesso Restrito</Button>
+                                    <Button as={Link} to="#" className="btn-custom">Acesso Restrito</Button>
                                 </div>
 
                                 </Navbar.Collapse>

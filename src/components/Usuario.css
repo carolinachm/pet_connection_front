@@ -29,22 +29,22 @@ body {
 }
 
 .action-buttons {
-    margin-bottom: 20px; /* Espaço abaixo dos botões */
+    margin-bottom: 15px; /* Espaço abaixo dos botões */
 }
 
 /* Alterando as cores dos botões */
 .button {
     font-size: 0.9rem;
     padding: 10px 20px; /* Aumente o padding se necessário */
-    background-color: #ffb884; /* Cor 1 */
-    color: #2e4347; /* Cor 5 */
+    background-color: #2e4347; /* Cor 1 */
+    color: white; /* Cor 5 */
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #c0d1c2; /* Cor 4 */
+    background-color: #ffb884; /* Cor 4 */
 }
 
 /* Tabela de Usuários */

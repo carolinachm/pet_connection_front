@@ -5,6 +5,7 @@
 .color4 { background-color: #c0d1c2; }
 .color5 { background-color: #2e4347; }
 
+
 body {
     background-color: #fff8d4;
 }
@@ -37,7 +38,7 @@ body {
 .btn-custom {
     font-size: 0.9rem; /* Tamanho da fonte */
     padding: 8px 15px; /* Ajustado para um tamanho menor */
-    background-color: #2e4347; /* Cor padrão (Cor 5) */
+    background-color: #ffb884; /* Cor botao/
     color: white; /* Cor do texto */
     border: none; /* Remove borda */
     border-radius: 5px; /* Bordas arredondadas */
@@ -45,7 +46,7 @@ body {
 }
 
 .btn-custom:hover {
-    background-color: #ffb884; /* Cor 1 para hover */
+    background-color: #fff8d4; /* Cor 1 para hover */
 }
 
 /* Seção principal com imagem de fundo */
@@ -85,7 +86,7 @@ body {
 button {
     font-size: 1rem; /* Diminuído para 1rem */
     padding: 8px 20px; /* Ajustado para um tamanho menor */
-    background-color: #ffb884; /* Cor 1 */
+    background-color: #f5df98; /* Cor 2 */
     border: none;
     color: white;
     border-radius: 5px; /* Bordas arredondadas */
@@ -93,7 +94,7 @@ button {
 }
 
 button:hover {
-    background-color: #f5df98; /* Cor 2 para hover */
+    background-color: #ffb884; /* Cor 2 para hover */
 }
 
 /* Título da próxima seção */
