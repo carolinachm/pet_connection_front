@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import "../Home/Home.css"; // Importa o arquivo CSS para personalização
+import "../Home/Home_module.css"; // Importa o arquivo CSS para personalização
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 // Importando as imagens de patinhas
