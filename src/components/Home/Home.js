@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -7,10 +7,11 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 // Importando as imagens de patinhas
 const pawImages = [
-  "/imagens/patinha_logo.png",
-  "/imagens/patinha_logo.png",
-  "/imagens/patinha_logo.png",
-  // Adicione mais caminhos de imagens aqui
+  `${process.env.PUBLIC_URL}/imagens/patinhas_gato.png`,
+  `${process.env.PUBLIC_URL}/imagens/patinhas_gato.png`,
+  `${process.env.PUBLIC_URL}/imagens/patinhas_gato.png`,
+  `${process.env.PUBLIC_URL}/imagens/patinhas_gato.png`,
+  `${process.env.PUBLIC_URL}/imagens/patinhas_gato.png`,
 ];
 
 function Home() {
@@ -35,28 +36,50 @@ function Home() {
 
   // Função para gerar posição aleatória
   const randomPosition = () => {
-    const x = Math.random() * 90; // 90% da largura da tela
-    const y = Math.random() * 90; // 90% da altura da tela
+    const x = Math.random() * 95; // 95% da largura da tela
+    const y = Math.random() * 95; // 95% da altura da tela
     return { x, y };
   };
 
-  // Função para adicionar uma patinha à tela
-  const addPaw = () => {
-    const position = randomPosition();
-    const image = pawImages[Math.floor(Math.random() * pawImages.length)];
-    setPaws((prevPaws) => [...prevPaws, { ...position, image }]);
-
-    // Remove a patinha após 3 segundos
-    setTimeout(() => {
-      setPaws((prevPaws) => prevPaws.filter((paw) => paw.image !== image));
-    }, 3000);
+  // Função para verificar se a nova posição colide com patinhas existentes
+  const isPositionOccupied = (newPosition) => {
+    return paws.some(paw => {
+      const distance = Math.sqrt(
+        Math.pow(newPosition.x - paw.x, 2) + Math.pow(newPosition.y - paw.y, 2)
+      );
+      return distance < 2; // Ajuste esse valor para aumentar ou diminuir o espaço
+    });
   };
 
-  // Adiciona uma patinha a cada 1 segundo
+  // Função para adicionar uma patinha à tela
+  const addPaw = useCallback(() => {
+    if (paws.length < 40) { // Limita o número de patinhas na tela a 40
+      let position;
+      do {
+        position = randomPosition();
+      } while (isPositionOccupied(position)); // Gera nova posição até que não colida
+
+      const image = pawImages[Math.floor(Math.random() * pawImages.length)];
+      setPaws((prevPaws) => [...prevPaws, { ...position, image, isVisible: true }]);
+
+      // Remove a patinha após 10 segundos
+      const timeoutId = setTimeout(() => {
+        setPaws((prevPaws) => prevPaws.filter((paw) => paw.image !== image));
+      }, 10000); 
+
+      return timeoutId; // Retorna o ID do timeout
+    }
+    return null;
+  }, [paws]); // Adiciona paws como dependência para garantir a contagem correta
+
+  // Função que controla o intervalo de adição de patinhas
   useEffect(() => {
-    const interval = setInterval(addPaw, 1000);
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(() => {
+      addPaw();
+    }, 1000); // Adiciona uma nova patinha a cada 1 segundo
+
+    return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+  }, [addPaw]);
 
   return (
     <div className="home-container">
@@ -64,9 +87,16 @@ function Home() {
         {paws.map((paw, index) => (
           <img
             key={index}
-            
+            src={paw.image} // A imagem da patinha
             className="paw"
-            style={{ left: `${paw.x}%`, top: `${paw.y}%` }} // Posição em porcentagem
+            style={{
+              left: `${paw.x}%`,
+              top: `${paw.y}%`,
+              position: 'absolute',
+              opacity: paw.isVisible ? 1 : 0, // Controla a opacidade
+              transition: 'opacity 15s ease', // Transição suave
+            }} // Transição suave
+            alt=""
           />
         ))}
       </div>
@@ -108,7 +138,7 @@ function Home() {
           </Form>
         </div>
       </div>
-      <img src={`${process.env.PUBLIC_URL}/imagens/logo2.png`} alt="" className="logo-home" />
+      <img src={`${process.env.PUBLIC_URL}/imagens/logo2.png`} alt="Logo" className="logo-home" />
     </div>
   );
 }
