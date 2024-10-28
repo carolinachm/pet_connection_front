@@ -48,11 +48,11 @@
 .paw:nth-child(5) { top: 50%; left: 10%; animation-delay: 2s; }
 .paw:nth-child(6) { top: 40%; left: 90%; animation-delay: 2.5s; }
 
-.logo {
-    position: absolute;
+.logo-home {
+    position: fixed;
     bottom: 20px; /* Ajusta a distância do fundo */
     right: 20px; /* Ajusta a distância da direita */
-    width: 100px; /* Ajusta o tamanho do logo */
+    width: 150px; /* Ajusta o tamanho do logo */
     height: auto; /* Mantém a proporção */
     z-index: 1; /* Garante que o logo fique acima das patinhas */
 }

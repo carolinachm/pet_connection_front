@@ -108,7 +108,7 @@ function Home() {
           </Form>
         </div>
       </div>
-      <img src={`${process.env.PUBLIC_URL}/imagens/logo2.png`} alt="" className="logo" />
+      <img src={`${process.env.PUBLIC_URL}/imagens/logo2.png`} alt="" className="logo-home" />
     </div>
   );
 }

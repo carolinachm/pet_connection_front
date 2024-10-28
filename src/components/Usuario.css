@@ -7,80 +7,78 @@
 
 /* Corpo da página */
 body {
-    background-color: #fff8d4; /* Cor 3 */
-    position: relative; /* Para posicionamento do logo */
-    min-height: 100vh; /* Para garantir que a página tenha altura mínima */
-}
-
-/* Cabeçalho com o logo à direita */
-.header {
-    display: flex;
-    justify-content: space-between; /* Logo à direita */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #2e4347; /* Cor 5 */
-}
-
-/* Centralizando botões e título */
-.container {
+    background-color: #fff8d4;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza todo o conteúdo */
+    align-items: center;
+    justify-content: flex-start; /* Alinha para o topo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.action-buttons {
-    margin-bottom: 15px; /* Espaço abaixo dos botões */
+/* Centralizando conteúdo principal */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative; /* Para o logo ser posicionado em relação a este contêiner */
 }
 
-/* Alterando as cores dos botões */
-.button {
-    font-size: 0.9rem;
-    padding: 10px 20px; /* Aumente o padding se necessário */
-    background-color: #2e4347; /* Cor 1 */
-    color: white; /* Cor 5 */
+/* Estilos para a imagem do logo */
+.logo-usuario {
+    position: fixed; /* Alinhado ao contêiner */
+    bottom: 20px; /* Distância do fundo da página */
+    right: 20px; /* Distância da direita */
+    width: 150px; /* Ajuste conforme necessário */
+    height: auto;
+    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+}
+
+/* Botão de cadastro */
+.button, button[type="submit"] {
+    background-color: #f5df98;
+    color: #2e4347;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
-.button:hover {
-    background-color: #ffb884; /* Cor 4 */
+.button:hover, button[type="submit"]:hover {
+    background-color: #ffb884;
 }
 
 /* Tabela de Usuários */
 .table {
-    width: 80%; /* Ajuste a largura da tabela */
+    width: 100%;
     margin-top: 20px;
-    border-collapse: collapse;
-    text-align: center; /* Centraliza o texto da tabela */
+    text-align: center;
 }
 
-/* Logo fixo na parte inferior direita */
-.fixed-logo {
-    position: fixed;
-    bottom: 20px; /* Ajuste a distância do fundo da página */
-    right: 20px; /* Ajuste a distância da direita */
-    z-index: 1000; /* Para garantir que o logo fique acima de outros elementos */
-}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 15px;
+    }
 
-/* Modal Formulário */
-.modal-header, .modal-footer {
-    background-color: #ffb884; /* Cor 1 */
-    color: #2e4347;
-}
+    .table {
+        font-size: 0.9rem;
+    }
 
-.modal-body {
-    background-color: #fff8d4; /* Cor 3 */
-}
+    .button, button[type="submit"] {
+        width: 90%;
+        padding: 8px 12px;
+    }
 
-button[type="submit"] {
-    background-color: #2e4347; /* Cor 5 */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-}
-
-button[type="submit"]:hover {
-    background-color: #ffb884; /* Cor 1 */
+    /* Ajuste do logo para telas menores */
+    .logo {
+        width: 35px; /* Diminuindo o tamanho do logo em telas menores */
+        bottom: 10px;
+        right: 10px; /* Mantém o logo dentro da tela em telas pequenas */
+    }
 }

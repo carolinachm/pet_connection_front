@@ -37,17 +37,19 @@ body {
 
 .btn-custom {
     font-size: 0.9rem; /* Tamanho da fonte */
-    padding: 8px 15px; /* Ajustado para um tamanho menor */
-    background-color: #ffb884; /* Cor botao/
+    padding: 8px 15px; 
+    background-color: #ffb884 !important;  /* Cor botão */
     color: white; /* Cor do texto */
     border: none; /* Remove borda */
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 9px; /* Bordas arredondadas */
     transition: background-color 0.3s; /* Transição suave para hover */
+    cursor: pointer; /* Muda o cursor para a mão */
 }
 
 .btn-custom:hover {
-    background-color: #fff8d4; /* Cor 1 para hover */
+    background-color: #f5df98!important; /* Cor 1 para hover */
 }
+
 
 /* Seção principal com imagem de fundo */
 .main-section {
@@ -83,7 +85,7 @@ body {
     flex-direction: column; /* Coloca os botões em coluna */
 }
 
-button {
+.button {
     font-size: 1rem; /* Diminuído para 1rem */
     padding: 8px 20px; /* Ajustado para um tamanho menor */
     background-color: #f5df98; /* Cor 2 */

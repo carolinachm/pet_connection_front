@@ -4,13 +4,9 @@ import {
   getUsuarios,
   createUsuario,
   deleteUsuario
-
 } 
-from '../../service/usuarioService'; // Certifique-se de que o caminho está correto
-import './Usuario'; // O caminho relativo ao CSS está correto
-
-
-
+from '../../service/usuarioService';
+import '../Usuario.css'; // Verifique se o caminho está correto
 
 function Usuario() {
   const [show, setShow] = useState(false);
@@ -41,7 +37,7 @@ function Usuario() {
     e.preventDefault();
     try {
       await createUsuario(novoUsuario);
-      const data = await getUsuarios(); // Recarrega a lista de usuários
+      const data = await getUsuarios();
       setUsuarios(data);
       setNovoUsuario({ nome: '', email: '', senha: '' });
       handleClose();
@@ -53,7 +49,7 @@ function Usuario() {
   return (
       <div className="container mt-5">
         <h1>Usuários</h1>
-        <Button variant="primary" onClick={handleShow}>
+        <Button className="button" onClick={handleShow}>
           Cadastrar Usuário
         </Button>
 
@@ -100,7 +96,7 @@ function Usuario() {
                 />
               </Form.Group>
 
-              <Button variant="primary" type="submit">
+              <Button className="button" type="submit">
                 Cadastrar
               </Button>
             </Form>
@@ -147,8 +143,8 @@ function Usuario() {
         </div>
 
         {/* Logo fixo na parte inferior direita */}
-        <div className="fixed-logo">
-          <img src="/imagens/logo2.png" alt="Logo" />
+        <div className="fixed-logo-usuario">
+          <img src="/imagens/logo2.png" alt="" className='logo-usuario' />
         </div>
       </div>
   );
