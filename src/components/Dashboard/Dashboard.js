@@ -21,7 +21,7 @@ function Dashboard() {
                                     <div className="action-buttons">
                                         <Button as={Link} to="/usuario" className="btn-custom">Usuário</Button>
                                         <Button as={Link} to="/padrinho" className="btn-custom">Padrinho</Button>
-                                        <Button as={Link} to="#" className="btn-custom">Acesso Restrito</Button>
+                                        <Button as={Link} to="/Animal" className="btn-custom">Doar</Button>
                                     </div>
                                 </Navbar.Collapse>
                             </Navbar>
@@ -36,9 +36,9 @@ function Dashboard() {
                 <div className="content text-center">
                     <h2>Facilitamos a conexão entre você e seu futuro pet</h2>
                     <div className="buttons">
-                        <Button as={Link} to="/adote" variant="primary" className="btn-custom adopt-btn">Adote</Button>
+                        <Button as={Link} to="#" variant="primary" className="btn-custom adopt-btn">Adote</Button>
                         <h4>ou</h4>
-                        <Button as={Link} to="/apadrinhe" variant="secondary" className="btn-custom sponsor-btn">Apadrinhe</Button>
+                        <Button as={Link} to="#" variant="secondary" className="btn-custom sponsor-btn">Apadrinhe</Button>
                     </div>
                 </div>
                 <img src="/imagens/pngtree-cute-cat-paw-tricolor-calico-breed-png-image_11580204.png" alt="Animal Right" className="animal-right" />
@@ -49,48 +49,54 @@ function Dashboard() {
            
             {/* Seção com cards dos animais */}
             <Container fluid>
-                <Row>
-                    <Col md={4}>
-                        <div className="animal-card">
+            <Row>
+                <Col md={4}>
+                    <div className="animal-card">
+                        <Link to="./Animal">
                             <img src="/imagens/gato.webp" alt="Gato disponível para adoção" />
-                            <div className="animal-info">
-                                <div className="animal-name">Rex</div>
-                                <div className="animal-details">
-                                    <div>Macho</div>
-                                    <div>Castrado</div>
-                                    <div>São Paulo</div>
-                                </div>
+                        </Link>
+                        <div className="animal-info">
+                            <div className="animal-name">Rex</div>
+                            <div className="animal-details">
+                                <div>Macho</div>
+                                <div>Castrado</div>
+                                <div>São Paulo</div>
                             </div>
                         </div>
-                    </Col>
-                    <Col md={4}>
-                        <div className="animal-card">
+                    </div>
+                </Col>
+                <Col md={4}>
+                    <div className="animal-card">
+                        <Link to="./Animal">
                             <img src="/imagens/dog.webp" alt="Cachorro disponível para adoção" />
-                            <div className="animal-info">
-                                <div className="animal-name">Luna</div>
-                                <div className="animal-details">
-                                    <div>Fêmea</div>
-                                    <div>Não castrada</div>
-                                    <div>Rio de Janeiro</div>
-                                </div>
+                        </Link>
+                        <div className="animal-info">
+                            <div className="animal-name">Luna</div>
+                            <div className="animal-details">
+                                <div>Fêmea</div>
+                                <div>Não castrada</div>
+                                <div>Rio de Janeiro</div>
                             </div>
                         </div>
-                    </Col>
-                    <Col md={4}>
-                        <div className="animal-card">
+                    </div>
+                </Col>
+                <Col md={4}>
+                    <div className="animal-card">
+                        <Link to="./Animal">
                             <img src="/imagens/catdog.webp" alt="Animal 3 disponível para adoção" />
-                            <div className="animal-info">
-                                <div className="animal-name">Max</div>
-                                <div className="animal-details">
-                                    <div>Macho</div>
-                                    <div>Castrado</div>
-                                    <div>Curitiba</div>
-                                </div>
+                        </Link>
+                        <div className="animal-info">
+                            <div className="animal-name">Max</div>
+                            <div className="animal-details">
+                                <div>Macho</div>
+                                <div>Castrado</div>
+                                <div>Curitiba</div>
                             </div>
                         </div>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
 
             {/* Rodapé */}
             <footer className="footer">
