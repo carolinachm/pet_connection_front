@@ -1,11 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col, Nav, Navbar, Button } from "react-bootstrap";
 import "./Dashboard.css";
 import { useInView } from "react-intersection-observer";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   const { ref: animalCard1Ref, inView: animalCard1InView } = useInView({
     triggerOnce: true,
   });
@@ -65,11 +67,19 @@ function Dashboard() {
         <div className="content">
           <h2>Facilitamos a conexão entre você e seu futuro pet</h2>
           <div className="buttons">
-            <Button variant="primary" className="btn-custom adopt-btn">
+            <Button
+              variant="primary"
+              className="btn-custom adopt-btn"
+              onClick={() => navigate("/Adocao")}
+            >
               Adote
             </Button>{" "}
             <h4>ou</h4>
-            <Button variant="secondary" className="btn-custom sponsor-btn">
+            <Button
+              variant="secondary"
+              className="btn-custom sponsor-btn"
+              onClick={() => navigate("/Adocao")}
+            >
               Apadrinhe
             </Button>
           </div>
