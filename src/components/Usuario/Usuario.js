@@ -6,7 +6,7 @@ import {
   deleteUsuario
 } 
 from '../../service/usuarioService';
-import '../Usuario.css'; // Verifique se o caminho está correto
+import '../Usuario_estilo.css'; // Verifique se o caminho está correto
 
 function Usuario() {
   const [show, setShow] = useState(false);

@@ -1,0 +1,22 @@
+.animal-list {
+  padding: 20px;
+}
+
+.animal-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cartões se movam para a próxima linha se não houver espaço */
+  gap: 20px; /* Espaço entre os cartões */
+}
+
+.animal-card2 {
+  border: 1px solid #ccc; /* Borda dos cartões */
+  border-radius: 8px; /* Cantos arredondados */
+  overflow: hidden; /* Garante que o conteúdo não transborde */
+  width: 200px; /* Largura fixa para cada cartão */
+  text-align: center; /* Centraliza o texto */
+}
+
+.animal-foto {
+  width: 100%; /* A imagem ocupa 100% do cartão */
+  height: auto; /* Mantém a proporção da imagem */
+}

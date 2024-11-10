@@ -61,7 +61,7 @@ body_home {
     right: 20px; /* Distância da direita */
     width: 150px; /* Tamanho do logo */
     height: auto; /* Mantém a proporção */
-    z-index: 1; /* Garante que o logo fique acima das patinhas */
+    
 }
 
 .content-wrapper {
