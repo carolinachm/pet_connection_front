@@ -6,7 +6,7 @@ import {
   deleteUsuario
 } 
 from '../../service/usuarioService';
-import '../Usuario_estilo.css'; // Verifique se o caminho está correto
+import '../Usuario_estilo.css'; 
 
 function Usuario() {
   const [show, setShow] = useState(false);
@@ -144,7 +144,9 @@ function Usuario() {
 
         {/* Logo fixo na parte inferior direita */}
         <div className="fixed-logo-usuario">
-          <img src="/imagens/logo2.png" alt="" className='logo-usuario' />
+          <a href="/">
+           <img src="/imagens/logo2.png" alt="Logo" className='logo-usuario' />
+          </a>
         </div>
       </div>
   );
