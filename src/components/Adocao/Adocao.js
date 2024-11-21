@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Adocao.css";
+import "./Adocao_estilo.css";
 
 const AdocaoList = () => {
   const [animais, setAnimais] = useState([]);

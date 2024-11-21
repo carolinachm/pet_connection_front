@@ -1,0 +1,161 @@
+/* Home.css */
+body_home {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimento */
+    height: 100vh; /* Altura total da janela de visualização */
+    overflow: hidden; /* Impede que elementos saiam da área visível */
+}
+
+.home-container {
+    background-color: #fff8d4; /* Fundo neutro claro */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif; /* Fonte simples e limpa */
+    position: relative; /* Para posicionamento absoluto dos elementos filhos */
+}
+
+.paw-background {
+    position: fixed; /* Mantém a div coberta na tela */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Permite interagir com elementos acima */
+}
+
+@keyframes pawPrint {
+    0% { opacity: 0; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-20px); } /* Aumenta o movimento para cima */
+    100% { opacity: 0; transform: translateY(0); }
+}
+
+.paw {
+    position: absolute;
+    width: 100px; /* Tamanho das patinhas */
+    height: 100px; /* Tamanho das patinhas */
+    background-image: url('/public/imagens/patinhas_gato.png'); /* Caminho correto para a imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: pawPrint 5s ease-in-out infinite; /* Duração de 5 segundos e animação infinita */
+    display: inline-block;
+}
+
+/* Ajuste as patinhas para aparecer em posições aleatórias */
+.paw:nth-child(1) { animation-delay: 0s; }
+.paw:nth-child(2) { animation-delay: 0.5s; }
+.paw:nth-child(3) { animation-delay: 1s; }
+.paw:nth-child(4) { animation-delay: 1.5s; }
+.paw:nth-child(5) { animation-delay: 2s; }
+.paw:nth-child(6) { animation-delay: 2.5s; }
+.paw:nth-child(7) { animation-delay: 3s; }
+.paw:nth-child(8) { animation-delay: 3.5s; }
+.paw:nth-child(9) { animation-delay: 4s; }
+.paw:nth-child(10) { animation-delay: 4.5s; }
+
+.logo-home {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    width: 150px; /* Tamanho do logo */
+    height: auto; /* Mantém a proporção */
+    
+}
+
+.content-wrapper {
+    background-color: #fff6e0; /* Fundo branco para o conteúdo */
+    padding: 5rem;
+    border-radius: 12px; /* Bordas mais arredondadas para um visual moderno */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombras mais suaves */
+    text-align: center;
+    max-width: 400px; /* Limita a largura do conteúdo */
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+    z-index: 1; /* Garante que as patinhas não passem por cima */
+    position: relative; /* Para posicionamento correto */
+}
+
+.content-wrapper:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+h1 {
+    color: #333333; /* Cor do título */
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #555555; /* Cor do texto */
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.submit-button {
+    margin-top: 10px;
+    display: inline-block;
+    background: linear-gradient(135deg, #ffb884 0%, #ffb884 100%); /* Gradiente sutil */
+    border: none;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px; /* Botões arredondados */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais definida */
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #c48e5c 0%, #c48e5c 100%); /* Alteração no gradiente ao passar o mouse */
+}
+
+.custom-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem; /* Espaçamento acima */
+    margin-bottom: 1.5rem; /* Espaçamento abaixo */
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.password-toggle-icon:hover {
+    color: #0056b3; /* Muda a cor ao passar o mouse */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}

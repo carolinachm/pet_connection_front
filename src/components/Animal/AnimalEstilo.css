@@ -24,6 +24,7 @@
   background-color: #007bff; /* Cor de fundo do botão */
   color: white; /* Cor do texto do botão */
   border: none; /* Remove a borda padrão */
+  width: 100%; /* Botão ocupa toda a largura */
   padding: 10px; /* Espaçamento interno do botão */
   border-radius: 4px; /* Bordas arredondadas do botão */
   font-size: 16px; /* Aumenta a fonte do botão */

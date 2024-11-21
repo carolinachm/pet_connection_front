@@ -6,7 +6,7 @@ function PrivacyPolicy() {
     return (
         <Container>
             <h1>Política de Privacidade</h1>
-            <p>Última atualização: [Data]</p>
+            <p>Última atualização: 13/10/2024</p>
             <h2>1. Informações que Coletamos</h2>
             <p>Coletamos informações pessoais que você nos fornece ao se registrar no site, preencher formulários ou entrar em contato conosco.</p>
 

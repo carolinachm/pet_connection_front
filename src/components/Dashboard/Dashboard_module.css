@@ -1,0 +1,260 @@
+/* Cores da paleta */
+.color1 { background-color: #ffb884; }
+.color2 { background-color: #f5df98; }
+.color3 { background-color: #fff8d4; }
+.color4 { background-color: #c0d1c2; }
+.color5 { background-color: #2e4347; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #fff8d4;
+}
+
+/* Div abaixo do cabeçalho */
+.header-below {
+    background-color: #fff8d4; /* Cor 3 da paleta */
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Estilização dos botões de ação no cabeçalho */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-custom {
+    font-size: 0.9rem;
+    padding: 8px 15px; 
+    background-color: #ffb884 !important;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #f5df98!important;
+}
+
+
+/* Seção principal com imagem de fundo */
+.main-section {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #89a7b1;
+    padding: 0 20px;
+}
+
+.animal-left, .animal-right {
+    height: 250px;
+}
+
+.content {
+    text-align: center;
+}
+
+.main-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2e4347;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 8px 20px;
+    background-color: #f5df98;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ffb884;
+}
+
+/* Título da próxima seção */
+.section-title {
+    text-align: center;
+    margin: 50px 0;
+    color: #2e4347;
+    margin-bottom: 20px;
+}
+
+/* Seção de animais disponíveis para adoção */
+.animal-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #89a7b1;
+    background-color: #89a7b1;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    max-width: 500px; /* Limita a largura para cartões */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.animal-card img {
+    width: 100%;
+    max-height: 400px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.animal-info {
+    position: relative; 
+    background: #ffb884;
+    color: #2e4347;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.animal-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+    width: 100%;
+    height: 80%;
+    background-color: #fff8d4 ;
+    padding: 20px 0;
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+footer img {
+    position: relative;
+    right: 10px;
+    height: auto;
+    bottom: 5px; 
+    width: 100px;
+    margin-left: 300px;
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+/* Estilizando os links do rodapé */
+.footer-content a {
+    color: #2e4347;
+    margin-left: -50px;
+}
+
+.footer-content a:hover {
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-below, .main-section, .footer {
+        padding: 15px;
+    }
+    
+    .main-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .animal-card {
+        max-width: 100%;
+    }
+
+    .animal-card img {
+        max-height: 200px;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 7px 15px;
+    }
+
+    .btn-custom {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        padding-left: 15px;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer img {
+        position: static;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .button, .btn-custom {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .animal-card {
+        padding: 8px;
+    }
+
+    .footer-content p, .footer-content a {
+        font-size: 0.9rem;
+    }
+}
