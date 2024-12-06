@@ -136,6 +136,9 @@ function Home() {
               Entrar
             </Button>
           </Form>
+          <div className="register-link">
+            <p>Não tem uma conta? <span onClick={() => navigate("/usuario")} className="cadastro-link">Cadastre-se</span></p>
+          </div>
         </div>
       </div>
       <img src={`${process.env.PUBLIC_URL}/imagens/logo2.png`} alt="Logo" className="logo-home" />
