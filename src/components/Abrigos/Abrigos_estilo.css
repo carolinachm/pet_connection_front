@@ -1,0 +1,92 @@
+/* Layout geral */
+.abrigo-list {
+  padding: 20px 40px;
+  background-color: #fff8d4;
+  text-align: center;
+}
+
+/* Cabeçalho */
+.abrigo-header {
+  margin-bottom: 30px;
+}
+
+.abrigo-header h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2e4347;
+}
+
+.button {
+  font-size: 1rem;
+  padding: 10px 25px;
+  background-color: #f5df98;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ffb884;
+}
+
+/* Container dos cartões */
+.abrigo-cards-container {
+  display: grid; /* Organiza os cartões em uma grade */
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 20px; /* Espaçamento entre os cartões */
+  justify-items: start; /* Alinha os cartões à esquerda */
+  margin-top: 20px;
+}
+
+/* Cartões de abrigos */
+.abrigo-card {
+  border: 1px solid #89a7b1;
+  background-color: #89a7b1;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Imagem */
+.abrigo-card img {
+  width: 100%;
+  max-height: 200px; /* Limita a altura */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Informações do abrigo */
+.abrigo-info {
+  background: #ffb884;
+  color: #2e4347;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.abrigo-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .abrigo-cards-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .abrigo-cards-container {
+      grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+  }
+}

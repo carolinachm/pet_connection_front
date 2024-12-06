@@ -20,7 +20,7 @@ function Dashboard() {
                                 <Navbar.Collapse id="basic-navbar-nav">
                                 <div className="action-buttons">
                                     <Button as={Link} to="/usuario" className="btn-custom">Usuário</Button>
-                                    <Button as={Link} to="/adocao" className="btn-custom">Padrinho</Button>
+                                    <Button as={Link} to="/adocao" className="btn-custom">Adoção</Button>
                                     <Button as={Link} to="/Animal" className="btn-custom">Doação</Button>
                                 </div>
 
@@ -33,12 +33,12 @@ function Dashboard() {
 
             {/* Seção principal com imagem de fundo e botões centralizados */}
             <div className="main-section">
-                <img src="/imagens/—Pngtree—happy dog giving high five_15465214.png" alt="Animal Left" className="animal-left"/>
+                <img src="/imagens/pngtree-cute-cat-paw-tricolor-calico-breed-png-image_11580204.png" alt="Animal Left" className="animal-left"/>
                 <div className="content">
                     <h2>Facilitamos a conexão entre você e seu futuro pet</h2>
                     <div className="buttons">
-                        <Button variant="primary" className="btn-custom adopt-btn">Adote</Button> <h4>ou</h4>
-                        <Button variant="secondary" className="btn-custom sponsor-btn">Apadrinhe</Button>
+                        <Button as={Link} to="/Abrigos" className="btn-custom">Adote</Button> <h4>ou</h4>
+                        <Button as={Link} to="/Abrigos" className="btn-custom">Apadrinhe</Button>
                     </div>
                     
                 </div>

@@ -11,6 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "./toast.css";
 import AnimalForm from "./components/Animal/Animal";
 import AdocaoList from "./components/Adocao/Adocao";
+import AbrigoList from "./components/Abrigos/Abrigos";
+import CadastroAbrigo from "./components/Cadastro/CadastroAbrigo.js";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Animal" element={<AnimalForm />} />
         <Route path="/Adocao" element={<AdocaoList />} />
+        <Route path="/Abrigos" element={<AbrigoList />} />
+        <Route path="/Abrigo" element={<CadastroAbrigo />} />
+        
       </Routes>
       <ToastContainer />
     </BrowserRouter>
